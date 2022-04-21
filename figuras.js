@@ -77,3 +77,19 @@ console.group("Figuras")
   // console.log(`El area del circulo es: ${areaCirculo} cm^2`)
   console.groupEnd()
 console.groupEnd()
+
+// INTERACCION CON HTML
+function calcularPerimetroCuadrado () {
+  const input = document.getElementById("InputCuadrado")
+  const value = input.value
+  
+  const perimetro = perimetroCuadrado(value)
+  alert(perimetro)
+}
+function calcularAreaCuadrado () {
+  const input = document.getElementById("InputCuadrado")
+  const value = input.value
+  
+  const area = areaCuadrado(value)
+  alert(area) 
+}
