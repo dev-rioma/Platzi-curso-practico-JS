@@ -79,10 +79,13 @@ console.group("Figuras")
 console.groupEnd()
 
 // INTERACCION CON HTML
+
+// 🟩
+
 function calcularPerimetroCuadrado () {
   const input = document.getElementById("InputCuadrado")
   const value = input.value
-  
+    
   const perimetro = perimetroCuadrado(value)
   alert(perimetro)
 }
@@ -93,3 +96,85 @@ function calcularAreaCuadrado () {
   const area = areaCuadrado(value)
   alert(area) 
 }
+
+// 🔺
+
+function calcularPerimetroTriangulo () {
+  const input1 = document.getElementById("InputTriangulo1")
+  const value1 = Number(input1.value)
+  
+  
+  const input2 = document.getElementById("InputTriangulo2")
+  const value2 = Number(input2.value)
+  
+
+  const base3 = document.getElementById("InputTrianguloB")
+  const baseValue = Number(base3.value)
+  
+  
+  const perimetro = perimetroTriangulo(value1, value2, baseValue)
+  alert(perimetro)
+}
+
+function calcularAreaTriangulo () {
+  const input1 = document.getElementById("InputTrianguloB")
+  const valueB = Number(input1.value)
+
+  const input2 = document.getElementById("InputTrianguloH")
+  const valueH = Number(input2.value)
+
+  const area = areaTriangulo(valueB, valueH)
+  alert(area)
+}
+
+// Ejercicio H 🔺isoceles
+
+function alturaIsoceles (lado, base) {
+  const BaseTriangulo = Number(base/2)
+  return Math.sqrt((Math.pow(lado, 2))-(Math.pow(BaseTriangulo, 2)))
+
+}
+
+function calcularAlturaTrianguloI () {
+
+  const input1 = document.getElementById("InputTrianguloLadoA")
+  const valueL = Number(input1.value)
+  
+  const input2 = document.getElementById("InputTrianguloBase")
+  const valueB = Number(input2.value)
+
+  const input3 = document.getElementById("InputTrianguloLadoB")
+  const valueL2 = Number(input3.value)
+
+  if (valueL === valueL2) {
+    const altura = alturaIsoceles(valueL, valueB)
+    alert(altura)
+  } else {
+    alert("sorry tu 🔺 no es isoceles")
+  }
+}
+
+// 🟡
+
+function calculoPerimetroCirculo () {
+  const input = document.getElementById("InputRadio")
+  const value = Number(input.value)
+  const diametro = diametroCirculo(value)
+
+  const perimetro = diametro * PI
+  alert(perimetro)
+}
+
+function calculoAreaCirculo () {
+  const input = document.getElementById("InputRadio")
+  const value = Number(input.value)
+
+  const area = areaCirculo(value)
+  alert(area)
+}
+
+
+
+
+
+
